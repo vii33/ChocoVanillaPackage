@@ -186,6 +186,11 @@ If you are behind a proxy, check these [instructions](https://chocolatey.org/doc
 1. Wait and grab a **vanilla chocolate** :)
 
 
+You probably want to tidy up your [Windows Explorer right-click menu](https://www.howtogeek.com/howto/windows-vista/how-to-clean-up-your-messy-windows-context-menu/).
+
+If you have questions, just contact me.
+
+
 # Script Content
 
   The PowerShell script consists of a dictionary that contains the applications to install and their customized parameters (if needed). An example of a custom parameter is a different install location or the creation of a desktop shortcut.
@@ -195,10 +200,6 @@ If you are behind a proxy, check these [instructions](https://chocolatey.org/doc
   There is one dictionary for basic applications and one for development applications. The dictionary is selected on user-startup.
 
 
-
-You probably want to tidy up your [Windows Explorer right-click menu](https://www.howtogeek.com/howto/windows-vista/how-to-clean-up-your-messy-windows-context-menu/).
-
-If you have questions, just contact me.
 
 
 --------------
