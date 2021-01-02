@@ -4,36 +4,30 @@
 
 # Motivation
 
-I have do administer a lot of Windows devices for friends and family.
-At some point, it really gets exhausting to install the same basic softwares over and over again.
+When you setup a new Windows PC, you have to install a bunch of basic softwares. Examples are a browser, PDF reader, text editor, zipping program and so on. 
+Doing this fequently gets exhausting, especially when you also have to  do administer devices for your friends and family.
 
-Luckily, with [Chocolatey](https://chocolatey.org/) we finally have a package manager for Windows. It allows us to manage software from the command line.
 
->So I created a PowerShell script which installs common freewares for standard users (Adobe, VLC, Chrome...)  and additionally tools for more advanced uses (git, VS Code, nodeJs...).
+Luckily, with [Chocolatey](https://chocolatey.org/) there is a package manager for Windows. It allows to manage software from the command line.
 
-*With this script you are able to setup a *vanilla* PC within minutes.*
+>I created a fully PowerShell script for Chocolatey which installs common freeware applications and optionally tools for more advanced uses (like git and VS Code).
+
+*With this script you are able to setup a *vanilla* PC within minutes.* This is fully customizable.
 
 # Short installation instructions
-Install [Chocolatey](https://chocolatey.org/), download the script and run it. You will be asked if the basic apps bundle or developer apps bundle should be installed. Chocolatey then pulls all the software from the offical servers and installs it in the background.
+Install [Chocolatey](https://chocolatey.org/), download the script and run it. You will be asked if the basic apps bundle or developer apps bundle should be installed. Chocolatey then pulls the applications from the offical servers and installs it in the background.
 
 For a more detailled description see section xxxxxxxxxxxx.
 
 # Included Applications
  
-All applications are very common freewares, so I refer you to the corresponding websites for further explanation.
+All applications are very common freewares, so I refer you to the corresponding websites for further explanation. 
 
-#### Basic Application Bundle
-<style type="text/css">
-    .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
-    .tg td{background-color:#fff;border-bottom-width:1px;border-color:#ccc;border-style:solid;border-top-width:1px;
-    border-width:0px;color:#333;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;
-    word-break:normal;}
-    .tg th{background-color:#f0f0f0;border-bottom-width:1px;border-color:#ccc;border-style:solid;border-top-width:1px;
-    border-width:0px;color:#333;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;
-    padding:10px 5px;word-break:normal;}
-    .tg .tg-z8l7{background-color:#f9f9f9;font-family:Tahoma, Geneva, sans-serif !important;;text-align:left;vertical-align:top}
-    .tg .tg-8l38{font-family:Tahoma, Geneva, sans-serif !important;;text-align:left;vertical-align:top}
-</style>
+Which apps should be installed can be fully customized and enhanced. Just delete, uncomment or add apps in the script.
+
+(<img src="readme-images/1a.png">: Installed by default, <img src="readme-images/0.png">: Optionally installed )
+
+### Basic Application Bundle
 
 <table class="tg">
 <thead>
@@ -106,7 +100,7 @@ All applications are very common freewares, so I refer you to the corresponding 
 
 
 
-#### Developer Application Bundle
+### Developer Application Bundle
 
 <table class="tg">
 <thead>
@@ -155,12 +149,11 @@ All applications are very common freewares, so I refer you to the corresponding 
 </tbody>
 </table>
 
-If you want to customize which apps will be installed, see section xxxxxxxxx
+<br/>
 
 #### Applications that need to be installed manually
 
-Currently [Spotify](https://www.spotify.com/de/download/) is available on Chocolatey but the installtion did not work on my machine.
-
+Currently, [Spotify](https://www.spotify.com/de/download/) fails on installation and is therefore not included in the script. 
 
 
 
@@ -196,18 +189,18 @@ Currently [Spotify](https://www.spotify.com/de/download/) is available on Chocol
 ### Chocolatey installation
 
 1. Open PowerShell as admin: `Win` +  `X` and select `PowerShell (Admin)`
-2. Paste in the following line. It allows to execute the official installment script from Chocolatey. If you want to have a look inside, check the link at the end of the string.
+2. Paste in the following line. It executes the official [installment script](https://chocolatey.org/install.ps1) from Chocolatey. 
 
   ```	 
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))  
   ```
 
-3. Chocolatey will be installed. It is normal that a warning appears.
+3. Chocolatey will be installed. It is normal that some warnings appear.
 
 If you are behind a proxy, check these [instructions](https://chocolatey.org/docs/proxy-settings-for-chocolatey#installing-chocolatey-behind-a-proxy-server).
 
 
-### Download and modify the script
+### Download and modify the Vanilla script
 
 1. Clone this repo or click on the green "Code" button and then on `Download ZIP`. Unzip the downloaded folder.
 2. In certain Windows editions the execution of PowerShell scripts is disabled by default. 
@@ -224,14 +217,15 @@ PowerShell.exe -ExecutionPolicy UnRestricted -File .\install-standard-apps.ps1
 
 --------------
 
-#### Contibution
+#### Image Contibution
 
-<span>Photo by <a href="https://unsplash.com/@crj2day?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Casey Johnson</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<span>Photograph by <a href="https://unsplash.com/@crj2day?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Casey Johnson</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>.</span>
+Image montage by me.
 
 
 
 
-# Temp
+### Temp
 
 
 <details> <summary>CLICK ME</summary>
