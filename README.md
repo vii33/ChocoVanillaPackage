@@ -16,7 +16,7 @@ Luckily, with [Chocolatey](https://chocolatey.org/) there is a package manager f
 # Short installation instructions
 Install [Chocolatey](https://chocolatey.org/), download the script, and run it. You will be asked if the basic apps bundle or developer apps bundle should be installed. Chocolatey then pulls the applications from the official servers and installs them in the background.
 
-For a more detailed description see section [below](#detailed-installationinstructions).
+For a more detailed description see section [below](#detailed-installation-instructions).
 
 # Included Applications
  
@@ -153,16 +153,7 @@ Which of the apps are to be installed can be fully customized and extended. Simp
 
 Currently, [Spotify](https://www.spotify.com/de/download/) fails upon installation and is therefore not included in the script. 
 
-
-
-# Script Content
-
-  The PowerShell script consists of a dictionary that contains the applications to install and their customized parameters (if needed). An example of a custom parameter is a different install location or the creation of a desktop shortcut.
-  
-  <img src="readme-images/dict.png" width="420" />
-
-  There is one dictionary for basic applications and one for development applications. The dictionary is selected on user-startup.
-
+<br/>
 
 # Detailed installation instructions
 
@@ -185,7 +176,7 @@ If you are behind a proxy, check these [instructions](https://chocolatey.org/doc
 
 1. Clone this repo or download the .zip (then unzip the folder).
 1. Navigate to the downloaded folder and open up the script `choco-install-apps.ps1` in *Edit* Mode (right-click menu)
-1. Enable or disable needed applications. The `#` sign comments a line out (disables it), deleting the leading `#` sign enables the line. See also [section above](#script-content).
+1. Enable or disable needed applications. The `#` sign comments a line out (disables it), deleting the leading `#` sign enables the line. See also [section below](#script-content).
 1. Save and close.
 
 ### Execute Vanilla Script
@@ -194,7 +185,16 @@ If you are behind a proxy, check these [instructions](https://chocolatey.org/doc
 `PowerShell.exe -ExecutionPolicy UnRestricted -File choco-install-apps.ps1`
 1. Wait and grab a **vanilla chocolate** :)
 
-<br/>
+
+# Script Content
+
+  The PowerShell script consists of a dictionary that contains the applications to install and their customized parameters (if needed). An example of a custom parameter is a different install location or the creation of a desktop shortcut.
+  
+  <img src="readme-images/dict.png" width="420" />
+
+  There is one dictionary for basic applications and one for development applications. The dictionary is selected on user-startup.
+
+
 
 You probably want to tidy up your [Windows Explorer right-click menu](https://www.howtogeek.com/howto/windows-vista/how-to-clean-up-your-messy-windows-context-menu/).
 
