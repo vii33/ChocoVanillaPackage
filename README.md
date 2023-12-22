@@ -2,11 +2,7 @@
 ![](https://img.shields.io/github/forks/vii33/ChocoVanillaPackage.svg)
 ![https://twitter.com/vii33_official](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 ![https://vii33.medium.com/](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)
-
-![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![](https://img.shields.io/badge/Powershell-2CA5E0?style=for-the-badge&logo=powershell&logoColor=white)
-
-
 
 
 # The Choco Vanilla Package
