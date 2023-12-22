@@ -8,7 +8,7 @@
 ![Header Image](readme-images/Header.jpg)
 # The Choco Vanilla Package 
 
->PowerShell script for Chocolatey which installs common freeware applications, like Chrome, 7zip, git, and Python. This is meant to setup vanialla PCs. Installations are fully customizable in the script.
+>PowerShell script for Chocolatey which installs common freeware applications, like Chrome, 7zip, git, and Python. This is meant to setup vanilla PCs. Installations are fully customizable in the script.
 
 # Motivation
 
