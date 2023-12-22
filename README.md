@@ -5,19 +5,18 @@
 ![](https://img.shields.io/badge/Powershell-2CA5E0?style=for-the-badge&logo=powershell&logoColor=white)
 
 
-# The Choco Vanilla Package
-
-
 ![Header Image](readme-images/Header.jpg)
+# The Choco Vanilla Package 
+
+>PowerShell script for Chocolatey which installs common freeware applications, like Chrome, 7zip, git, and Python. This is meant to setup vanialla PCs. Installations are fully customizable in the script.
 
 # Motivation
 
-When you set up a new Windows PC, you have to install a bunch of basic software. Examples are a browser, PDF reader, text editor, zipping program, and so on. Doing this frequently gets exhausting, especially when you also have to administer devices for your friends and family.
+When you set up a new Windows PC, you usually need to install a bunch of basic applications. Examples include a browser, PDF reader, text editor, zipping program, and so on. Doing this frequently can get to a hustle, especially if you also have to administer devices for your friends and family.
 
 
-Luckily, with [Chocolatey](https://chocolatey.org/) there is a package manager for Windows. It allows you to install and update most of the software you know directly from the command line.
+Furtunately, with [Chocolatey](https://chocolatey.org/) there is a package manager for Windows. It allows you to install and update applications directly from the command line.
 
->I created a PowerShell script for Chocolatey which installs common freeware applications and optionally tools for more advanced uses, like git and VS Code. All fully customizable.
 
 *With this script, you can set up a *vanilla* Windows PC within minutes.*
 
@@ -55,7 +54,7 @@ Which of the apps are to be installed can be fully customized and extended. Simp
         <img src="readme-images/1a.png"><a href="https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"> Adobe Reader</a><br/>
         <img src="readme-images/0.png"><a href="https://www.foxitsoftware.com/pdf-reader/"> Foxit Reader</a><br/>
     </td>
-    <td class="tg-8l38">Common freewares for all media formats (images &amp; movies), texts files, .zips, .raws, and PDFs.<br>For PDFs you can stick with the default Adobe Reader or alternatively choose Foxit Reader (my recommendation).</td>
+    <td class="tg-8l38">Common freewares for all media formats, texts files, .zips, .raws, and PDFs.<br>For PDFs you can stick with the default Adobe Reader or alternatively choose Foxit Reader (my recommendation).</td>
   </tr>
   <tr>
     <td class="tg-z8l7">Browsers</td>
@@ -67,21 +66,21 @@ Which of the apps are to be installed can be fully customized and extended. Simp
     <td class="tg-8l38">Google Chrome will be installed by default. Alternatively, choose Firefox or Opera.</td>
   </tr>
   <tr>
-    <td class="tg-z8l7">File Sync</td>
+    <td class="tg-z8l7">Cloud storage</td>
     <td class="tg-8l38">
         <img src="readme-images/0.png"><a href="https://www.dropbox.com"> Dropbox</a><br/>
         <img src="readme-images/0.png"><a href="https://www.google.com/drive/"> Google Drive</a><br/>
     </td>
-    <td class="tg-8l38">Microsoft OneDrive is pre-installed on every Windows 10 system, so you probably won't need the others.</td>
+    <td class="tg-8l38">Microsoft OneDrive is pre-installed on every Windows 11 system, so you probably won't need the others.</td>
   </tr>
   <tr>
-    <td class="tg-z8l7">Collaboration</td>
+    <td class="tg-z8l7">Meetings</td>
     <td class="tg-8l38">
         <img src="readme-images/1a.png"><a href="https://zoom.us"> Zoom</a><br/>
         <img src="readme-images/1a.png"><a href="https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/download-app"> Microsoft Teams</a><br/>
         <img src="readme-images/0.png"><a href="https://discord.com/"> Discord</a><br/>
     </td>
-    <td class="tg-8l38">Zoom and Microsoft Teams are common video conference tools (both personal and corporate). Zoom may be not allowed in your company, in this case, you should disable it. Discord is for all the tech-people out there (disabled by default)</td>
+    <td class="tg-8l38">Zoom and Microsoft Teams are common video conference tools (both personal and corporate). Zoom may be not allowed in your company, in this case, you should disable it. Discord gained a lot of attention in the last years, but is still disabled by default at the moment.</td>
   </tr>
   <tr>
     <td class="tg-z8l7">System administration</td>
@@ -169,13 +168,13 @@ Currently, [Spotify](https://www.spotify.com/de/download/) fails upon installati
 ### Chocolatey installation
 
 1. Open PowerShell as admin (`Win` +  `X` and select `PowerShell (Admin)`)
-2. Paste in the following line. It executes the official [installment script](https://chocolatey.org/install.ps1) from Chocolatey. 
+2. Paste the following line. This will run the official [install script](https://chocolatey.org/install.ps1) from Chocolatey. 
 
   ```	 
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))  
   ```
 
-3. Chocolatey will be installed. It is normal that some warnings appear.
+3. Chocolatey will be installed. It is normal for some warnings to appear.
 
 If you are behind a proxy, check these [instructions](https://chocolatey.org/docs/proxy-settings-for-chocolatey#installing-chocolatey-behind-a-proxy-server).
 
@@ -189,25 +188,21 @@ If you are behind a proxy, check these [instructions](https://chocolatey.org/doc
 
 ### Execute Vanilla Script
 1. Open PowerShell as admin (`Win` +  `X` and select `PowerShell (Admin)`) and navigate to the downloaded folder.
-1. Run the script `choco-install-apps.ps1`. If you should get an error, then local scripts are disabled on your machine. To enable them, type  
+1. Run the script `choco-install-apps.ps1`. If you get an error, then local scripts are disabled on your machine. To enable them, type  
 `PowerShell.exe -ExecutionPolicy UnRestricted -File choco-install-apps.ps1`
 1. Wait and grab a **vanilla chocolate** :)
 
 
 You probably want to tidy up your [Windows Explorer right-click menu](https://www.howtogeek.com/howto/windows-vista/how-to-clean-up-your-messy-windows-context-menu/).
 
-If you have questions, just contact me.
-
 
 # Script Content
 
-  The PowerShell script consists of a dictionary that contains the applications to install and their customized parameters (if needed). An example of a custom parameter is a different install location or the creation of a desktop shortcut.
-  
-  <img src="readme-images/dict.png" width="420" />
+The PowerShell script consists of a dictionary that contains the applications to install and their customized parameters (if needed). An example of a custom parameter is a different install location or the creation of a desktop shortcut.
 
-  There is one dictionary for basic applications and one for development applications. The dictionary is selected on user-startup.
+<img src="readme-images/dict.png" width="420" />
 
-
+There is one dictionary for basic applications and one for development applications. The dictionary is selected on user-startup.
 
 
 --------------
